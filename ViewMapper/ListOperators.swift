@@ -40,7 +40,7 @@ public func <- <T> (left: UICollectionView, right: ([T.T.T], T)) where T: CellMa
 public func <- <T> (left: UITableView, right: ([T.T], UINib)) where T: ViewMappable, T: UITableViewCell {
   let (values, nib) = right
   
-  let nibAdapter = NibAdapter<T>(nib: nib)
+  let nibAdapter = NibCellMapperAdapter<T>(nib: nib)
   
   left <- (values, nibAdapter)
 }
@@ -49,7 +49,7 @@ public func <- <T> (left: UITableView, right: ([T.T], UINib)) where T: ViewMappa
 public func <- <T> (left: UICollectionView, right: ([T.T], UINib)) where T: ViewMappable, T: UICollectionViewCell {
   let (values, nib) = right
   
-  let nibAdapter = NibAdapter<T>(nib: nib)
+  let nibAdapter = NibCellMapperAdapter<T>(nib: nib)
   
   left <- (values, nibAdapter)
 }

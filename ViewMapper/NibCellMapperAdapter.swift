@@ -8,28 +8,24 @@
 
 import Foundation
 
-class NibAdapter<MappableType: ViewMappable>: CellMapperAdapter {
-  typealias T = MappableType
+open class NibCellMapperAdapter<MappableType: ViewMappable>: CellMapperAdapter {
+  public typealias T = MappableType
   
   var nib: UINib!
   
-  required public init() {
-    
-  }
-  
-  init(nib: UINib) {
+  public init(nib: UINib) {
     self.nib = nib
   }
   
-  var cellTypes: [CellMapperType] {
+  open var cellTypes: [CellMapperType] {
     return [CellMapperType(identifier: String(nib.hashValue), nib: nib)]
   }
   
-  func cellIdentifier(forRow row: T.T) -> String {
+  open func cellIdentifier(forRow row: T.T) -> String {
     return String(nib.hashValue)
   }
   
-  func didTapCell(forRow row: T.T) {
+  open func didTapCell(forRow row: T.T) {
     
   }
 }

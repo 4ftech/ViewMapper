@@ -8,11 +8,9 @@
 
 import Foundation
 
-
 public protocol CellMapperAdapter {
   associatedtype T: ViewMappable
   
-  init()
   var cellTypes: [CellMapperType] { get }
   func cellIdentifier(forRow row: T.T) -> String
   func didTapCell(forRow row: T.T)

@@ -9,8 +9,8 @@
 import Foundation
 
 public class CellMapperType: NSObject {
-  var identifier: String!
-  var nib: UINib!
+  public var identifier: String!
+  public var nib: UINib!
   
   public required init(identifier: String, nib: UINib) {
     super.init()
