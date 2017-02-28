@@ -9,9 +9,11 @@
 import Foundation
 
 // MARK: - Table Adapter
-class TableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, UITableViewDataSource {
+class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, UITableViewDataSource {
   var values: [T.T.T]!
   var cellAdapter: T!
+  
+  weak var delegate: StaticListDelegate?
   
   init(values: [T.T.T], cellAdapter: T) {
     self.values = values
@@ -33,5 +35,10 @@ class TableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, UITable
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T.T
     cell.map(object: row)
     return cell as! UITableViewCell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let row = values[indexPath.row]
+    delegate?.didTapCell(forRow: row)
   }
 }

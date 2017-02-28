@@ -13,7 +13,6 @@ public protocol CellMapperAdapter {
   
   var cellTypes: [CellMapperType] { get }
   func cellIdentifier(forRow row: T.T) -> String
-  func didTapCell(forRow row: T.T)
 }
 
 

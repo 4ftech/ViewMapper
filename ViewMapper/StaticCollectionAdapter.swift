@@ -9,9 +9,11 @@
 import Foundation
 
 // MARK: - Collection Adapter
-class CollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
   var values: [T.T.T]!
   var cellAdapter: T!
+  
+  weak var delegate: StaticListDelegate?
   
   init(values: [T.T.T], cellAdapter: T) {
     self.values = values
@@ -33,6 +35,11 @@ class CollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewDelegat
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T.T
     cell.map(object: row)
     return cell as! UICollectionViewCell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let row = values[indexPath.row]
+    delegate?.didTapCell(forRow: row)
   }
 }
 

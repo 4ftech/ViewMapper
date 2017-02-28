@@ -12,7 +12,7 @@ import Foundation
 // MARK: - Table/Collection Cell Adapters
 public func <- <T> (left: UITableView, right: ([T.T.T], T)) where T: CellMapperAdapter {
   let (values, cellAdapter) = right
-  let dataSourceDelegate = TableAdapter(values: values, cellAdapter: cellAdapter)
+  let dataSourceDelegate = StaticTableAdapter(values: values, cellAdapter: cellAdapter)
   
   for cellType in cellAdapter.cellTypes {
     left.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
@@ -25,7 +25,7 @@ public func <- <T> (left: UITableView, right: ([T.T.T], T)) where T: CellMapperA
 
 public func <- <T> (left: UICollectionView, right: ([T.T.T], T)) where T: CellMapperAdapter {
   let (values, cellAdapter) = right
-  let dataSourceDelegate = CollectionAdapter(values: values, cellAdapter: cellAdapter)
+  let dataSourceDelegate = StaticCollectionAdapter(values: values, cellAdapter: cellAdapter)
   
   for cellType in cellAdapter.cellTypes {
     left.register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)

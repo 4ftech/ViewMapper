@@ -21,10 +21,11 @@
 		705D2D881E5E18D9005D3A5F /* ViewMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */; };
 		705D2D8B1E5E19E7005D3A5F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D8A1E5E19E7005D3A5F /* Eureka.framework */; };
 		705D2E4A1E6093FE005D3A5F /* CellMapperAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */; };
-		705D2E4C1E60942A005D3A5F /* TableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4B1E60942A005D3A5F /* TableAdapter.swift */; };
-		705D2E4E1E609442005D3A5F /* CollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4D1E609442005D3A5F /* CollectionAdapter.swift */; };
+		705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */; };
+		705D2E4E1E609442005D3A5F /* StaticCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */; };
 		705D2E981E609726005D3A5F /* NibCellMapperAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */; };
 		705D2E9A1E609740005D3A5F /* CellMapperType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E991E609740005D3A5F /* CellMapperType.swift */; };
+		705D2F4C1E6629BB005D3A5F /* StaticListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2F4B1E6629BB005D3A5F /* StaticListDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,10 +47,11 @@
 		705D2D861E5E18CA005D3A5F /* EurekaViewMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaViewMapper.swift; sourceTree = "<group>"; };
 		705D2D8A1E5E19E7005D3A5F /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMapperAdapter.swift; sourceTree = "<group>"; };
-		705D2E4B1E60942A005D3A5F /* TableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapter.swift; sourceTree = "<group>"; };
-		705D2E4D1E609442005D3A5F /* CollectionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAdapter.swift; sourceTree = "<group>"; };
+		705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableAdapter.swift; sourceTree = "<group>"; };
+		705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCollectionAdapter.swift; sourceTree = "<group>"; };
 		705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCellMapperAdapter.swift; sourceTree = "<group>"; };
 		705D2E991E609740005D3A5F /* CellMapperType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMapperType.swift; sourceTree = "<group>"; };
+		705D2F4B1E6629BB005D3A5F /* StaticListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticListDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +116,9 @@
 				705D2E991E609740005D3A5F /* CellMapperType.swift */,
 				705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */,
 				705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */,
-				705D2E4B1E60942A005D3A5F /* TableAdapter.swift */,
-				705D2E4D1E609442005D3A5F /* CollectionAdapter.swift */,
+				705D2F4B1E6629BB005D3A5F /* StaticListDelegate.swift */,
+				705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */,
+				705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */,
 			);
 			path = ViewMapper;
 			sourceTree = "<group>";
@@ -346,13 +349,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				705D2D271E5D22C0005D3A5F /* ViewMappable.swift in Sources */,
-				705D2E4E1E609442005D3A5F /* CollectionAdapter.swift in Sources */,
+				705D2E4E1E609442005D3A5F /* StaticCollectionAdapter.swift in Sources */,
 				705D2E981E609726005D3A5F /* NibCellMapperAdapter.swift in Sources */,
 				705D2E4A1E6093FE005D3A5F /* CellMapperAdapter.swift in Sources */,
 				705D2D571E5E0F47005D3A5F /* ListOperators.swift in Sources */,
-				705D2E4C1E60942A005D3A5F /* TableAdapter.swift in Sources */,
+				705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */,
 				705D2E9A1E609740005D3A5F /* CellMapperType.swift in Sources */,
 				705D2D551E5E0E8C005D3A5F /* Operators.swift in Sources */,
+				705D2F4C1E6629BB005D3A5F /* StaticListDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
