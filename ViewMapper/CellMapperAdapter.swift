@@ -11,9 +11,9 @@ import Foundation
 public protocol CellMapperAdapter {
   associatedtype T: ViewMappable
   
+  var onTapCell: ((T.T, UIViewController) -> Void)? { get set }
+  
   var cellTypes: [CellMapperType] { get }
   func cellIdentifier(forRow row: T.T) -> String
-  func didTapCell(forRow row: T.T, inViewController controller: UIViewController)
 }
-
 

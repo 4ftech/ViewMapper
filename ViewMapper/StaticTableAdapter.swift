@@ -34,11 +34,12 @@ class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, U
     let identifier = cellAdapter.cellIdentifier(forRow: row)
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T.T
     cell.map(object: row)
+    
     return cell as! UITableViewCell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let row = values[indexPath.row]
-    cellAdapter.didTapCell(forRow: row, inViewController: viewController)
+    cellAdapter.onTapCell?(row, viewController)
   }
 }

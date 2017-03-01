@@ -31,6 +31,7 @@
 		705D2F801E668731005D3A5F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D8A1E5E19E7005D3A5F /* Eureka.framework */; };
 		705D2F8A1E668807005D3A5F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2F891E668807005D3A5F /* Parse.framework */; };
 		705D2F8C1E66880E005D3A5F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2F8B1E66880E005D3A5F /* Bolts.framework */; };
+		705D2FFE1E6762C1005D3A5F /* ViewMappableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		705D2F7D1E668714005D3A5F /* ParseEurekaViewMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseEurekaViewMapper.swift; sourceTree = "<group>"; };
 		705D2F891E668807005D3A5F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
 		705D2F8B1E66880E005D3A5F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMappableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */,
 				705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */,
 				705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */,
+				705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */,
 			);
 			path = ViewMapper;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				705D2D271E5D22C0005D3A5F /* ViewMappable.swift in Sources */,
 				705D2E4E1E609442005D3A5F /* StaticCollectionAdapter.swift in Sources */,
 				705D2E981E609726005D3A5F /* NibCellMapperAdapter.swift in Sources */,
+				705D2FFE1E6762C1005D3A5F /* ViewMappableController.swift in Sources */,
 				705D2E4A1E6093FE005D3A5F /* CellMapperAdapter.swift in Sources */,
 				705D2D571E5E0F47005D3A5F /* ListOperators.swift in Sources */,
 				705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */,
@@ -793,6 +797,7 @@
 				705D2F7C1E668705005D3A5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

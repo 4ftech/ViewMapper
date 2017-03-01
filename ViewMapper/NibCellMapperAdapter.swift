@@ -12,7 +12,8 @@ open class NibCellMapperAdapter<MappableType: ViewMappable>: CellMapperAdapter {
   public typealias T = MappableType
   
   var nib: UINib!
-  
+  open var onTapCell: ((T.T, UIViewController) -> Void)? = nil
+    
   public init(nib: UINib) {
     self.nib = nib
   }
@@ -23,9 +24,5 @@ open class NibCellMapperAdapter<MappableType: ViewMappable>: CellMapperAdapter {
   
   open func cellIdentifier(forRow row: T.T) -> String {
     return String(nib.hashValue)
-  }
-  
-  open func didTapCell(forRow row: T.T, inViewController controller: UIViewController) {
-    
   }
 }
