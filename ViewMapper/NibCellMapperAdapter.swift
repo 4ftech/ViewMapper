@@ -24,4 +24,8 @@ open class NibCellMapperAdapter<MappableType: ViewMappable>: CellMapperAdapter {
   open func cellIdentifier(forRow row: T.T) -> String {
     return String(nib.hashValue)
   }
+  
+  open func didTapCell(forRow row: T.T, inViewController controller: UIViewController) {
+    
+  }
 }

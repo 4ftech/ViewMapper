@@ -13,7 +13,7 @@ class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewD
   var values: [T.T.T]!
   var cellAdapter: T!
   
-  weak var delegate: StaticListDelegate?
+  weak var viewController: UIViewController!
   
   init(values: [T.T.T], cellAdapter: T) {
     self.values = values
@@ -39,7 +39,7 @@ class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewD
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let row = values[indexPath.row]
-    delegate?.didTapCell(forRow: row)
+    cellAdapter.didTapCell(forRow: row, inViewController: viewController)
   }
 }
 

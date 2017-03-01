@@ -13,7 +13,7 @@ class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, U
   var values: [T.T.T]!
   var cellAdapter: T!
   
-  weak var delegate: StaticListDelegate?
+  weak var viewController: UIViewController!
   
   init(values: [T.T.T], cellAdapter: T) {
     self.values = values
@@ -39,6 +39,6 @@ class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, U
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let row = values[indexPath.row]
-    delegate?.didTapCell(forRow: row)
+    cellAdapter.didTapCell(forRow: row, inViewController: viewController)
   }
 }
