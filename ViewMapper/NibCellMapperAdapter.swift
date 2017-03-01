@@ -14,8 +14,9 @@ open class NibCellMapperAdapter<MappableType: ViewMappable>: CellMapperAdapter {
   var nib: UINib!
   open var onTapCell: ((T.T, UIViewController) -> Void)? = nil
     
-  public init(nib: UINib) {
+  public init(nib: UINib, initializer: ((NibCellMapperAdapter) -> Void)? = nil) {
     self.nib = nib
+    initializer?(self)
   }
   
   open var cellTypes: [CellMapperType] {
