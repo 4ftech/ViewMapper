@@ -1,4 +1,3 @@
 github "Haneke/HanekeSwift" "feature/swift-3"
-
 github "xmartlabs/Eureka"
 github "ParsePlatform/Parse-SDK-iOS-OSX"
