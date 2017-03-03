@@ -14,7 +14,11 @@ import Parse
 public func <- <T, U> (left: T, right: (PFObject, String)) -> T where T:RowType, T:BaseRow, T:TypedRowType, T.Cell.Value == U {
   let (object, key) = right
   left.onChange { textRow in
-    object[key] = textRow.value
+    if let value = textRow.value {
+      object[key] = value
+    } else {
+      object[key] = NSNull()
+    }
   }
   left.value = object[key] as? U
   return left

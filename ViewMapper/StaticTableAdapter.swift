@@ -32,7 +32,9 @@ class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, U
     let row: T.T.T = values[indexPath.row]
     
     let identifier = cellAdapter.cellIdentifier(forRow: row)
+
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T.T
+    
     cell.map(object: row)
     
     return cell as! UITableViewCell
@@ -41,5 +43,5 @@ class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, U
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let row = values[indexPath.row]
     cellAdapter.onTapCell?(row, viewController)
-  }
+  }  
 }

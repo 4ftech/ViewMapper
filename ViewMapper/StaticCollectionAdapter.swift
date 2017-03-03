@@ -32,8 +32,11 @@ class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewD
     let row: T.T.T = values[indexPath.row]
     
     let identifier = cellAdapter.cellIdentifier(forRow: row)
+
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T.T
+    
     cell.map(object: row)
+    
     return cell as! UICollectionViewCell
   }
   

@@ -135,14 +135,9 @@
 			children = (
 				705D2D1E1E5D22B3005D3A5F /* ViewMapper.h */,
 				705D2D1F1E5D22B3005D3A5F /* Info.plist */,
+				70C407C41E699F9500A14EB7 /* Lists */,
 				705D2D261E5D22C0005D3A5F /* ViewMappable.swift */,
 				705D2D541E5E0E8C005D3A5F /* Operators.swift */,
-				705D2D561E5E0F47005D3A5F /* ListOperators.swift */,
-				705D2E991E609740005D3A5F /* CellMapperType.swift */,
-				705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */,
-				705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */,
-				705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */,
-				705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */,
 				705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */,
 			);
 			path = ViewMapper;
@@ -187,6 +182,19 @@
 				705D2F7D1E668714005D3A5F /* ParseEurekaViewMapper.swift */,
 			);
 			path = ParseEurekaViewMapper;
+			sourceTree = "<group>";
+		};
+		70C407C41E699F9500A14EB7 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				705D2D561E5E0F47005D3A5F /* ListOperators.swift */,
+				705D2E991E609740005D3A5F /* CellMapperType.swift */,
+				705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */,
+				705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */,
+				705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */,
+				705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */,
+			);
+			name = Lists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
