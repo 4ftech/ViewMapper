@@ -13,6 +13,7 @@ public protocol CellMapperAdapter {
   
   var onTapCell: ((T.T, UIViewController) -> Void)? { get set }
   var size: ((T.T) -> CGSize)? { get set }
+  var canDelete: ((T.T) -> Bool)? { get set }
   
   var cellTypes: [CellMapperType] { get }
   func cellIdentifier(forRow row: T.T) -> String

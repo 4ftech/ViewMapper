@@ -21,6 +21,23 @@ public func <- (left: UILabel, right: String?) {
   left.text = right
 }
 
+// MARK: Dates
+public func <- (left: UILabel, right: Date?) {
+  left <- (right, "yyyy-MM-dd jj:mm")
+}
+
+public func <- (left: UILabel, right: (Date?, String)) {
+  let (date, format) = right
+  
+  if let date = date {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format, options: 0, locale: Locale.current)
+    left.text = dateFormatter.string(from: date)
+  } else {
+    left.text = nil
+  }
+}
+
 
 // MARK: - Images
 public func <- (left: UIImageView, right: UIImage?) {
