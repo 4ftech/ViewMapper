@@ -9,26 +9,26 @@
 import Foundation
 
 // MARK: - Collection Adapter
-class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
-  var values: [T.T.T]!
-  var cellAdapter: T!
+public class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+  public var values: [T.T.T]!
+  public var cellAdapter: T!
   
   weak var viewController: UIViewController!
   
-  init(values: [T.T.T], cellAdapter: T) {
+  public init(values: [T.T.T], cellAdapter: T) {
     self.values = values
     self.cellAdapter = cellAdapter
   }
   
-  func numberOfSections(in collectionView: UICollectionView) -> Int {
+  public func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
   
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return values.count
   }
   
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+  public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let row: T.T.T = values[indexPath.row]
     
     let identifier = cellAdapter.cellIdentifier(forRow: row)
@@ -40,7 +40,7 @@ class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewD
     return cell as! UICollectionViewCell
   }
   
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+  public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let row = values[indexPath.row]
     cellAdapter.onTapCell?(row, viewController)
   }

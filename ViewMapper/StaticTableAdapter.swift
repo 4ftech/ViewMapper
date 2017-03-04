@@ -9,26 +9,26 @@
 import Foundation
 
 // MARK: - Table Adapter
-class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, UITableViewDataSource {
-  var values: [T.T.T]!
-  var cellAdapter: T!
+public class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, UITableViewDataSource {
+  public var values: [T.T.T]!
+  public var cellAdapter: T!
   
   weak var viewController: UIViewController!
   
-  init(values: [T.T.T], cellAdapter: T) {
+  public init(values: [T.T.T], cellAdapter: T) {
     self.values = values
     self.cellAdapter = cellAdapter
   }
   
-  func numberOfSections(in tableView: UITableView) -> Int {
+  public func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return values.count
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row: T.T.T = values[indexPath.row]
     
     let identifier = cellAdapter.cellIdentifier(forRow: row)
@@ -40,7 +40,7 @@ class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDelegate, U
     return cell as! UITableViewCell
   }
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let row = values[indexPath.row]
     cellAdapter.onTapCell?(row, viewController)
   }  
