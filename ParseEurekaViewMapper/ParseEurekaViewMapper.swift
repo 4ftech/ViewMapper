@@ -17,7 +17,7 @@ public func <- <T, U> (left: T, right: (PFObject, String)) -> T where T:RowType,
     if let value = textRow.value {
       object[key] = value
     } else {
-      object[key] = NSNull()
+      object.remove(forKey: key)
     }
   }
   left.value = object[key] as? U

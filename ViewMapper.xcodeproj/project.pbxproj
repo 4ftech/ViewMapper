@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		705902131E79EEB200E5B7EE /* StaticTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705902121E79EEB200E5B7EE /* StaticTableController.swift */; };
 		705D2D201E5D22B3005D3A5F /* ViewMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 705D2D1E1E5D22B3005D3A5F /* ViewMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		705D2D271E5D22C0005D3A5F /* ViewMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2D261E5D22C0005D3A5F /* ViewMappable.swift */; };
 		705D2D551E5E0E8C005D3A5F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2D541E5E0E8C005D3A5F /* Operators.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		705902121E79EEB200E5B7EE /* StaticTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableController.swift; sourceTree = "<group>"; };
 		705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		705D2D1E1E5D22B3005D3A5F /* ViewMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewMapper.h; sourceTree = "<group>"; };
 		705D2D1F1E5D22B3005D3A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,10 +137,10 @@
 			children = (
 				705D2D1E1E5D22B3005D3A5F /* ViewMapper.h */,
 				705D2D1F1E5D22B3005D3A5F /* Info.plist */,
-				70C407C41E699F9500A14EB7 /* Lists */,
 				705D2D261E5D22C0005D3A5F /* ViewMappable.swift */,
 				705D2D541E5E0E8C005D3A5F /* Operators.swift */,
 				705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */,
+				70C407C41E699F9500A14EB7 /* Lists */,
 			);
 			path = ViewMapper;
 			sourceTree = "<group>";
@@ -193,6 +195,7 @@
 				705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */,
 				705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */,
 				705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */,
+				705902121E79EEB200E5B7EE /* StaticTableController.swift */,
 			);
 			name = Lists;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				705D2FFE1E6762C1005D3A5F /* ViewMappableController.swift in Sources */,
 				705D2E4A1E6093FE005D3A5F /* CellMapperAdapter.swift in Sources */,
 				705D2D571E5E0F47005D3A5F /* ListOperators.swift in Sources */,
+				705902131E79EEB200E5B7EE /* StaticTableController.swift in Sources */,
 				705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */,
 				705D2E9A1E609740005D3A5F /* CellMapperType.swift in Sources */,
 				705D2D551E5E0E8C005D3A5F /* Operators.swift in Sources */,

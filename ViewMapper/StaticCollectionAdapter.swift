@@ -42,8 +42,14 @@ public class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollecti
   
   public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let row = values[indexPath.row]
-    cellAdapter.onTapCell?(row, viewController)
+    cellAdapter.onSelectCell?(row, viewController)
   }
+  
+  public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    let row = values[indexPath.row]
+    cellAdapter.onDeselectCell?(row, viewController)
+  }
+
 }
 
 

@@ -13,13 +13,13 @@ public class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDele
   public var values: [T.T.T]!
   public var cellAdapter: T!
   
-  weak var viewController: UIViewController!
+  weak var viewController: UIViewController?
   
   public init(values: [T.T.T], cellAdapter: T) {
     self.values = values
     self.cellAdapter = cellAdapter
   }
-  
+
   public func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -40,8 +40,18 @@ public class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDele
     return cell as! UITableViewCell
   }
   
+  public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    let row = values[indexPath.row]
+    return cellAdapter.size?(row).height ?? tableView.rowHeight
+  }
+
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let row = values[indexPath.row]
-    cellAdapter.onTapCell?(row, viewController)
-  }  
+    cellAdapter.onSelectCell?(row, viewController)
+  }
+  
+  public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    let row = values[indexPath.row]
+    cellAdapter.onDeselectCell?(row, viewController)
+  }
 }

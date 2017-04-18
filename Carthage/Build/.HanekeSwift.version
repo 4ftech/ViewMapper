@@ -1,0 +1,22 @@
+{
+  "commitish" : "62057645b77a5bd0652e53b43258c6f5b4757f2f",
+  "iOS" : [
+    {
+      "hash" : "6b32c63148acb681afbc5796427fd79ed5f637a3b157445e3e9d12227c9246bd",
+      "name" : "Haneke"
+    }
+  ],
+  "xcodeVersion" : "Xcode 8.3.1\nBuild version 8E1000a",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "hash" : "bf5eea385304d5206f2c96f8f6a5fd44e1f352b06d536c8d1b9eba9717489454",
+      "name" : "Haneke"
+    }
+  ],
+  "Mac" : [
+
+  ]
+}

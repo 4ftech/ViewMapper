@@ -12,9 +12,10 @@ open class NibCellMapperAdapter<Mappable: ViewMappable>: CellMapperAdapter {
   public typealias T = Mappable
   
   var nib: UINib!
-
+  
   public var canDelete: ((Mappable.T) -> Bool)? = nil
-  public var onTapCell: ((Mappable.T, UIViewController) -> Void)? = nil
+  public var onSelectCell: ((Mappable.T, UIViewController?) -> Void)? = nil
+  public var onDeselectCell: ((Mappable.T, UIViewController?) -> Void)? = nil
   public var size: ((Mappable.T) -> CGSize)? = nil
   
   public init(nib: UINib, initializer: ((NibCellMapperAdapter) -> Void)? = nil) {

@@ -11,7 +11,8 @@ import Foundation
 public protocol CellMapperAdapter {
   associatedtype T: ViewMappable
   
-  var onTapCell: ((T.T, UIViewController) -> Void)? { get set }
+  var onSelectCell: ((T.T, UIViewController?) -> Void)? { get set }
+  var onDeselectCell: ((T.T, UIViewController?) -> Void)? { get set }
   var size: ((T.T) -> CGSize)? { get set }
   var canDelete: ((T.T) -> Bool)? { get set }
   
