@@ -1,4 +1,4 @@
 github "BoltsFramework/Bolts-ObjC" "1.8.4"
-github "Haneke/HanekeSwift" "62057645b77a5bd0652e53b43258c6f5b4757f2f"
+github "Haneke/HanekeSwift" "2f6d87f1f725d204d85cb34492e8c399cd5a200f"
 github "ParsePlatform/Parse-SDK-iOS-OSX" "1.14.4"
 github "xmartlabs/Eureka" "3.0.0"

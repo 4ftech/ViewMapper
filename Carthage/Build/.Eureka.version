@@ -2,18 +2,8 @@
   "commitish" : "3.0.0",
   "iOS" : [
     {
-      "hash" : "a2768659ae7a2ba0a59fff18e3edf5ef1b06bf9100607d2b95f55164b9736a01",
+      "hash" : "66b9e45c4e003435e5165b23aa5f68ec2faa5dbb067449a473addd55d3ea5f7c",
       "name" : "Eureka"
     }
-  ],
-  "xcodeVersion" : "Xcode 8.3.1\nBuild version 8E1000a",
-  "watchOS" : [
-
-  ],
-  "tvOS" : [
-
-  ],
-  "Mac" : [
-
   ]
 }

@@ -588,7 +588,7 @@
 				INFOPLIST_FILE = ViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -609,7 +609,7 @@
 				INFOPLIST_FILE = ViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -633,7 +633,7 @@
 				INFOPLIST_FILE = HanekeViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper.HanekeViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper.HanekeViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -658,7 +658,7 @@
 				INFOPLIST_FILE = HanekeViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper.HanekeViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper.HanekeViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -682,7 +682,7 @@
 				INFOPLIST_FILE = EurekaViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper.EurekaViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper.EurekaViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -707,7 +707,7 @@
 				INFOPLIST_FILE = EurekaViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper.EurekaViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper.EurekaViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -731,7 +731,7 @@
 				INFOPLIST_FILE = ParseEurekaViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper.ParseEurekaViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper.ParseEurekaViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -756,7 +756,7 @@
 				INFOPLIST_FILE = ParseEurekaViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oinkist.ViewMapper.ParseEurekaViewMapper;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bukapp.ViewMapper.ParseEurekaViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
