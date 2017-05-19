@@ -13,6 +13,7 @@ public protocol CellMapperAdapter {
   
   var onSelectCell: ((T.T, UIViewController?) -> Void)? { get set }
   var onDeselectCell: ((T.T, UIViewController?) -> Void)? { get set }
+  var onDequeueCell: ((T) -> Void)? { get set }
   var size: ((T.T) -> CGSize)? { get set }
   var canDelete: ((T.T) -> Bool)? { get set }
   

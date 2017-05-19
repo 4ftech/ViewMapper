@@ -20,10 +20,10 @@ public func <- (left: UIImageView, right: String?) {
 }
 
 public func <- (left: UIImageView, right: URL?) {
+  left.image = nil
+  
   if let url = right {
     left.hnk_setImageFromURL(url)
-  } else {
-    left.image = nil
   }
 }
 

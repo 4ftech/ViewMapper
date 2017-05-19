@@ -33,9 +33,9 @@ public class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollecti
     
     let identifier = cellAdapter.cellIdentifier(forRow: row)
 
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T.T
-    
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T.T    
     cell.map(object: row)
+    cellAdapter.onDequeueCell?(cell)
     
     return cell as! UICollectionViewCell
   }

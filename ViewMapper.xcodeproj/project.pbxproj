@@ -135,12 +135,12 @@
 		705D2D1D1E5D22B3005D3A5F /* ViewMapper */ = {
 			isa = PBXGroup;
 			children = (
+				70C407C41E699F9500A14EB7 /* Lists */,
 				705D2D1E1E5D22B3005D3A5F /* ViewMapper.h */,
 				705D2D1F1E5D22B3005D3A5F /* Info.plist */,
 				705D2D261E5D22C0005D3A5F /* ViewMappable.swift */,
 				705D2D541E5E0E8C005D3A5F /* Operators.swift */,
 				705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */,
-				70C407C41E699F9500A14EB7 /* Lists */,
 			);
 			path = ViewMapper;
 			sourceTree = "<group>";
@@ -264,7 +264,6 @@
 				705D2D5B1E5E131D005D3A5F /* Frameworks */,
 				705D2D5C1E5E131D005D3A5F /* Headers */,
 				705D2D5D1E5E131D005D3A5F /* Resources */,
-				705D2D781E5E1580005D3A5F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -283,7 +282,6 @@
 				705D2D7A1E5E18BF005D3A5F /* Frameworks */,
 				705D2D7B1E5E18BF005D3A5F /* Headers */,
 				705D2D7C1E5E18BF005D3A5F /* Resources */,
-				705D2D891E5E1914005D3A5F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -398,38 +396,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		705D2D781E5E1580005D3A5F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "carthage copy-frameworks";
-		};
-		705D2D891E5E1914005D3A5F /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		705D2D161E5D22B3005D3A5F /* Sources */ = {

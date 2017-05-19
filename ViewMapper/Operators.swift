@@ -52,3 +52,7 @@ public func <- (left: UISwitch, right: Bool) {
 public func <- (left: UITextView, right: String?) {
   left.text = right
 }
+
+public func <- (left: UITextField, right: String?) {
+  left.text = right
+}

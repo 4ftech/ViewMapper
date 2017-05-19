@@ -18,4 +18,8 @@ public class CellMapperType: NSObject {
     self.identifier = identifier
     self.nib = nib
   }
+  
+  public convenience init(identifier: String, nibName: String) {
+    self.init(identifier: identifier, nib: UINib(nibName: nibName, bundle: nil))
+  }
 }
