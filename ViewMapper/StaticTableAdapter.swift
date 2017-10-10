@@ -34,8 +34,8 @@ public class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDele
     let identifier = cellAdapter.cellIdentifier(forRow: row)
 
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T.T    
+    cellAdapter.onDequeueCell?(cell, indexPath)
     cell.map(object: row)
-    cellAdapter.onDequeueCell?(cell)
     
     return cell as! UITableViewCell
   }

@@ -9,65 +9,69 @@
 import Foundation
 
 
-// MARK: - Table/Collection Cell Adapters
-//public func <- <T> (left: UITableView, right: ([T.T.T], T)) where T: CellMapperAdapter {
-//  let (values, cellAdapter) = right
-//  let dataSourceDelegate = StaticTableAdapter(values: values, cellAdapter: cellAdapter)
-//  
-//  for cellType in cellAdapter.cellTypes {
-//    left.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
-//  }
-//  
-//  left.delegate = dataSourceDelegate
-//  left.dataSource = dataSourceDelegate
-//}
-
-public func <- <T> (left: UITableView, right: StaticTableAdapter<T>) where T: CellMapperAdapter {
+// MARK: - Table Cell Adapters
+public func <- <T> (left: UITableView, right: StaticTableAdapter<T>) {
   for cellType in right.cellAdapter.cellTypes {
     left.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
   }
   
   left.delegate = right
   left.dataSource = right
+  left.reloadData()
 }
 
+public func <- <T> (left: MappedTableView<T>, right: ([T.T.T], T)) {
+  let (values, cellAdapter) = right
+  
+  left.adapter = StaticTableAdapter(values: values, cellAdapter: cellAdapter)
+  
+  for cellType in cellAdapter.cellTypes {
+    left.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
+  }
+  
+  left.delegate = left.adapter
+  left.dataSource = left.adapter
+  left.reloadData()
+}
 
-//public func <- <T> (left: UICollectionView, right: ([T.T.T], T)) where T: CellMapperAdapter {
-//  let (values, cellAdapter) = right
-//  let dataSourceDelegate = StaticCollectionAdapter(values: values, cellAdapter: cellAdapter)
-//  
-//  for cellType in cellAdapter.cellTypes {
-//    left.register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)
-//  }
-//  
-//  left.delegate = dataSourceDelegate
-//  left.dataSource = dataSourceDelegate
-//}
+public func <- <T> (left: MappedTableView<NibCellMapperAdapter<T>>, right: ([T.T], UINib)) where T: UITableViewCell {
+  let (values, nib) = right
 
-public func <- <T> (left: UICollectionView, right: StaticCollectionAdapter<T>) where T: CellMapperAdapter {
+  let nibAdapter = NibCellMapperAdapter<T>(nib: nib)
+
+  left <- (values, nibAdapter)
+}
+
+// MARK: - Collection Cell Adapters
+public func <- <T> (left: UICollectionView, right: StaticCollectionAdapter<T>) {
   for cellType in right.cellAdapter.cellTypes {
     left.register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)
   }
   
   left.delegate = right
   left.dataSource = right
+  left.reloadData()
 }
 
+public func <- <T> (left: MappedCollectionView<T>, right: ([T.T.T], T)) {
+  let (values, cellAdapter) = right
 
-// MARK: - Table/Collection Nibs
-//public func <- <T> (left: UITableView, right: ([T.T], UINib)) where T: ViewMappable, T: UITableViewCell {
-//  let (values, nib) = right
-//  
-//  let nibAdapter = NibCellMapperAdapter<T>(nib: nib)
-//  
-//  left <- (values, nibAdapter)
-//}
-//
-//
-//public func <- <T> (left: UICollectionView, right: ([T.T], UINib)) where T: ViewMappable, T: UICollectionViewCell {
-//  let (values, nib) = right
-//  
-//  let nibAdapter = NibCellMapperAdapter<T>(nib: nib)
-//  
-//  left <- (values, nibAdapter)
-//}
+  left.adapter = StaticCollectionAdapter(values: values, cellAdapter: cellAdapter)
+
+  for cellType in cellAdapter.cellTypes {
+    left.register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)
+  }
+  
+  left.delegate = left.adapter
+  left.dataSource = left.adapter
+  left.reloadData()
+}
+
+public func <- <T> (left: MappedCollectionView<NibCellMapperAdapter<T>>, right: ([T.T], UINib)) where T: UICollectionViewCell {
+  let (values, nib) = right
+
+  let nibAdapter = NibCellMapperAdapter<T>(nib: nib)
+
+  left <- (values, nibAdapter)
+}
+

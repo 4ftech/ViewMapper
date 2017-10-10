@@ -11,7 +11,7 @@ import ViewMapper
 import Eureka
 import Parse
 
-public func <- <T, U> (left: T, right: (PFObject, String)) -> T where T:RowType, T:BaseRow, T:TypedRowType, T.Cell.Value == U {
+public func <- <T, U> (left: T, right: (PFObject, String)) -> T where T:RowType, T:BaseRow, T.Cell.Value == U {
   let (object, key) = right
   left.onChange { textRow in
     if let value = textRow.value {

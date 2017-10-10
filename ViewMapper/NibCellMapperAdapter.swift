@@ -8,7 +8,8 @@
 
 import Foundation
 
-open class NibCellMapperAdapter<Mappable: ViewMappable>: CellMapperAdapter {
+open class NibCellMapperAdapter<Mappable: ViewMappable>: CellMapperAdapter {  
+
   public typealias T = Mappable
   
   var nib: UINib!
@@ -16,16 +17,17 @@ open class NibCellMapperAdapter<Mappable: ViewMappable>: CellMapperAdapter {
   public var canDelete: ((Mappable.T) -> Bool)? = nil
   public var onSelectCell: ((Mappable.T, UIViewController?) -> Void)? = nil
   public var onDeselectCell: ((Mappable.T, UIViewController?) -> Void)? = nil
-  public var onDequeueCell: ((Mappable) -> Void)? = nil
+  public var onDequeueCell: ((Mappable, IndexPath) -> Void)? = nil
   public var size: ((Mappable.T) -> CGSize)? = nil
+  public var sectionHeader: ((Int) -> UIView?)? = nil
+  public var sectionHeaderHeight: ((Int) -> CGFloat)? = nil
+  public var onScrollViewDidScroll: ((UIScrollView) -> Void)? = nil
+  public var onScrollViewDidEndDecelerating: ((UIScrollView) -> Void)? = nil
+  public var onScrollViewDidEndDragging: ((UIScrollView, Bool) -> Void)? = nil
   
   public init(nib: UINib, initializer: ((NibCellMapperAdapter) -> Void)? = nil) {
     self.nib = nib
     initializer?(self)
-  }
-  
-  public convenience init(nibName: String, initializer: ((NibCellMapperAdapter) -> Void)? = nil) {
-    self.init(nib: UINib(nibName: nibName, bundle: nil), initializer: initializer)
   }
   
   open var cellTypes: [CellMapperType] {

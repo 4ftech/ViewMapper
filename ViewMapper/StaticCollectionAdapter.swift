@@ -9,11 +9,11 @@
 import Foundation
 
 // MARK: - Collection Adapter
-public class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+public class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   public var values: [T.T.T]!
   public var cellAdapter: T!
   
-  weak var viewController: UIViewController!
+  weak var viewController: UIViewController?
   
   public init(values: [T.T.T], cellAdapter: T) {
     self.values = values
@@ -32,10 +32,9 @@ public class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollecti
     let row: T.T.T = values[indexPath.row]
     
     let identifier = cellAdapter.cellIdentifier(forRow: row)
-
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T.T    
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T.T
+    cellAdapter.onDequeueCell?(cell, indexPath)
     cell.map(object: row)
-    cellAdapter.onDequeueCell?(cell)
     
     return cell as! UICollectionViewCell
   }
@@ -50,6 +49,11 @@ public class StaticCollectionAdapter<T: CellMapperAdapter>: NSObject, UICollecti
     cellAdapter.onDeselectCell?(row, viewController)
   }
 
+  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let row = values[indexPath.row]
+    let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+    return cellAdapter.size?(row) ?? flowLayout.itemSize
+  }
 }
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702A9ECF1EFCB7B100383405 /* MappedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A9ECE1EFCB7B100383405 /* MappedCollectionView.swift */; };
+		702A9ED11EFCB8B500383405 /* MappedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A9ED01EFCB8B500383405 /* MappedTableView.swift */; };
 		705902131E79EEB200E5B7EE /* StaticTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705902121E79EEB200E5B7EE /* StaticTableController.swift */; };
 		705D2D201E5D22B3005D3A5F /* ViewMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 705D2D1E1E5D22B3005D3A5F /* ViewMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		705D2D271E5D22C0005D3A5F /* ViewMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2D261E5D22C0005D3A5F /* ViewMappable.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		702A9ECE1EFCB7B100383405 /* MappedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappedCollectionView.swift; sourceTree = "<group>"; };
+		702A9ED01EFCB8B500383405 /* MappedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappedTableView.swift; sourceTree = "<group>"; };
 		705902121E79EEB200E5B7EE /* StaticTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableController.swift; sourceTree = "<group>"; };
 		705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		705D2D1E1E5D22B3005D3A5F /* ViewMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewMapper.h; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */,
 				705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */,
 				705902121E79EEB200E5B7EE /* StaticTableController.swift */,
+				702A9ECE1EFCB7B100383405 /* MappedCollectionView.swift */,
+				702A9ED01EFCB8B500383405 /* MappedTableView.swift */,
 			);
 			name = Lists;
 			sourceTree = "<group>";
@@ -316,7 +322,7 @@
 		705D2D121E5D22B3005D3A5F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Oinkist;
 				TargetAttributes = {
 					705D2D1A1E5D22B3005D3A5F = {
@@ -402,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702A9ECF1EFCB7B100383405 /* MappedCollectionView.swift in Sources */,
 				705D2D271E5D22C0005D3A5F /* ViewMappable.swift in Sources */,
 				705D2E4E1E609442005D3A5F /* StaticCollectionAdapter.swift in Sources */,
 				705D2E981E609726005D3A5F /* NibCellMapperAdapter.swift in Sources */,
@@ -411,6 +418,7 @@
 				705902131E79EEB200E5B7EE /* StaticTableController.swift in Sources */,
 				705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */,
 				705D2E9A1E609740005D3A5F /* CellMapperType.swift in Sources */,
+				702A9ED11EFCB8B500383405 /* MappedTableView.swift in Sources */,
 				705D2D551E5E0E8C005D3A5F /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +459,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -459,7 +469,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -483,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -504,7 +518,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -512,7 +528,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -530,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
