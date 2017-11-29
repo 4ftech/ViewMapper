@@ -2,8 +2,8 @@
   "commitish" : "2f6d87f1f725d204d85cb34492e8c399cd5a200f",
   "iOS" : [
     {
-      "hash" : "c0aa541ef1608a3287c7033aea5db803d57ff95321b2132e724a4a5955b6714a",
-      "name" : "Haneke"
+      "name" : "Haneke",
+      "hash" : "21710c87c1b6468abcefd20f9e337a7e235dcd538593999c5937424e232dbab1"
     }
   ]
 }
