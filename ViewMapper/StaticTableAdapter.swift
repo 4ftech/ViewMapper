@@ -32,10 +32,10 @@ public class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDele
   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row: T.T.T = values[indexPath.row]
     
-    let identifier = cellAdapter.cellIdentifier(scrollView: tableView, row: row)
+    let identifier = cellAdapter.cellIdentifier(forRow: row)
 
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T.T    
-    cellAdapter.onDequeueCell?(tableView, cell, row, indexPath)
+    cellAdapter.onDequeueCell?(cell, row, indexPath)
     cell.map(object: row)
     
     return cell as! UITableViewCell
@@ -43,16 +43,16 @@ public class StaticTableAdapter<T: CellMapperAdapter>: NSObject, UITableViewDele
   
   public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     let row = values[indexPath.row]
-    return cellAdapter.size?(tableView, row).height ?? tableView.rowHeight
+    return cellAdapter.size?(row).height ?? tableView.rowHeight
   }
 
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let row = values[indexPath.row]
-    cellAdapter.onSelectCell?(tableView, row, viewController)
+    cellAdapter.onSelectCell?(row, viewController)
   }
   
   public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
     let row = values[indexPath.row]
-    cellAdapter.onDeselectCell?(tableView, row, viewController)
+    cellAdapter.onDeselectCell?(row, viewController)
   }
 }

@@ -8,36 +8,36 @@
 
 import Foundation
 
-open class NibCellMapperAdapter<Mappable: ViewMappable>: CellMapperAdapter {
-  public typealias T = Mappable
+open class NibCellMapperAdapter<T: ViewMappable>: CellMapperAdapter {
+  public var cellTypes: [CellMapper<T>] = []
   
-  var nib: UINib?
-  
-  open var onSelectCell: ((UIScrollView, Mappable.T, UIViewController?) -> Void)? = nil
-  open var onDeselectCell: ((UIScrollView, Mappable.T, UIViewController?) -> Void)? = nil
-  open var onDequeueCell: ((UIScrollView, Mappable, Mappable.T, IndexPath) -> Void)? = nil
-  open var size: ((UIScrollView, Mappable.T) -> CGSize)? = nil
-  open var canDelete: ((UIScrollView, Mappable.T) -> Bool)? = nil
-  open var sectionHeader: ((UIScrollView, Int) -> UIView?)? = nil
-  open var sectionHeaderHeight: ((UIScrollView, Int) -> CGFloat)? = nil
+  open var onSelectCell: ((T.T, UIViewController?) -> Void)? = nil
+  open var onDeselectCell: ((T.T, UIViewController?) -> Void)? = nil
+  open var onDequeueCell: ((T, T.T, IndexPath) -> Void)? = nil
+  open var size: ((T.T) -> CGSize)? = nil
+  open var canDelete: ((T.T) -> Bool)? = nil
+  open var sectionHeader: ((Int) -> UIView?)? = nil
+  open var sectionHeaderHeight: ((Int) -> CGFloat)? = nil
   open var onScrollViewDidScroll: ((UIScrollView) -> Void)? = nil
   open var onScrollViewDidEndDecelerating: ((UIScrollView) -> Void)? = nil
   open var onScrollViewDidEndDragging: ((UIScrollView, Bool) -> Void)? = nil
   
-  public init(nib: UINib? = nil, initialize: ((NibCellMapperAdapter) -> Void)? = nil) {
-    self.nib = nib
+  public init(nib: UINib? = nil, initialize: ((NibCellMapperAdapter<T>) -> Void)? = nil) {
+    self.cellTypes = [CellMapper<T>(nib: nib)]
+    initialize?(self)
+  }
+
+  public init(nibName: String, initialize: ((NibCellMapperAdapter<T>) -> Void)? = nil) {
+    self.cellTypes = [CellMapper<T>(nibName: nibName)]
+    initialize?(self)
+  }
+
+  public init(cellMapper: CellMapper<T>, initialize: ((NibCellMapperAdapter<T>) -> Void)? = nil) {
+    self.cellTypes = [cellMapper]
     initialize?(self)
   }
   
-  open var cellTypes: [CellMapperType] {
-    if let nib = nib {
-      return [CellMapperType(identifier: String(describing: T.self), nib: nib)]
-    } else {
-      return [CellMapperType(identifier: String(describing: T.self), className: T.self as! AnyClass)]
-    }
-  }
-  
-  open func cellIdentifier(scrollView: UIScrollView, row: Mappable.T) -> String {
+  open func cellIdentifier(forRow: T.T) -> String {
     return String(describing: T.self)
   }
 }

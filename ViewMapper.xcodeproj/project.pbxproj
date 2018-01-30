@@ -27,7 +27,7 @@
 		705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */; };
 		705D2E4E1E609442005D3A5F /* StaticCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */; };
 		705D2E981E609726005D3A5F /* NibCellMapperAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */; };
-		705D2E9A1E609740005D3A5F /* CellMapperType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E991E609740005D3A5F /* CellMapperType.swift */; };
+		705D2E9A1E609740005D3A5F /* CellMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E991E609740005D3A5F /* CellMapper.swift */; };
 		705D2F791E668705005D3A5F /* ParseEurekaViewMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 705D2F771E668705005D3A5F /* ParseEurekaViewMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		705D2F7E1E668714005D3A5F /* ParseEurekaViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2F7D1E668714005D3A5F /* ParseEurekaViewMapper.swift */; };
 		705D2F7F1E66872B005D3A5F /* ViewMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */; };
@@ -62,7 +62,7 @@
 		705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableAdapter.swift; sourceTree = "<group>"; };
 		705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCollectionAdapter.swift; sourceTree = "<group>"; };
 		705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCellMapperAdapter.swift; sourceTree = "<group>"; };
-		705D2E991E609740005D3A5F /* CellMapperType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMapperType.swift; sourceTree = "<group>"; };
+		705D2E991E609740005D3A5F /* CellMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMapper.swift; sourceTree = "<group>"; };
 		705D2F751E668705005D3A5F /* ParseEurekaViewMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParseEurekaViewMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		705D2F771E668705005D3A5F /* ParseEurekaViewMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseEurekaViewMapper.h; sourceTree = "<group>"; };
 		705D2F781E668705005D3A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				705D2D561E5E0F47005D3A5F /* ListOperators.swift */,
-				705D2E991E609740005D3A5F /* CellMapperType.swift */,
+				705D2E991E609740005D3A5F /* CellMapper.swift */,
 				705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */,
 				705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */,
 				705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */,
@@ -417,7 +417,7 @@
 				705D2D571E5E0F47005D3A5F /* ListOperators.swift in Sources */,
 				705902131E79EEB200E5B7EE /* StaticTableController.swift in Sources */,
 				705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */,
-				705D2E9A1E609740005D3A5F /* CellMapperType.swift in Sources */,
+				705D2E9A1E609740005D3A5F /* CellMapper.swift in Sources */,
 				702A9ED11EFCB8B500383405 /* MappedTableView.swift in Sources */,
 				705D2D551E5E0E8C005D3A5F /* Operators.swift in Sources */,
 			);
