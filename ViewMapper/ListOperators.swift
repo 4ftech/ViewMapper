@@ -12,7 +12,7 @@ import Foundation
 // MARK: - Table Cell Adapters
 public func <- <T> (left: UITableView, right: StaticTableAdapter<T>) {
   for cellType in right.cellAdapter.cellTypes {
-    left.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
+    cellType.register(tableView: left)
   }
   
   left.delegate = right
@@ -26,7 +26,7 @@ public func <- <T> (left: MappedTableView<T>, right: ([T.T.T], T)) {
   left.adapter = StaticTableAdapter(values: values, cellAdapter: cellAdapter)
   
   for cellType in cellAdapter.cellTypes {
-    left.register(cellType.nib, forCellReuseIdentifier: cellType.identifier)
+    cellType.register(tableView: left)
   }
   
   left.delegate = left.adapter
@@ -45,7 +45,7 @@ public func <- <T> (left: MappedTableView<NibCellMapperAdapter<T>>, right: ([T.T
 // MARK: - Collection Cell Adapters
 public func <- <T> (left: UICollectionView, right: StaticCollectionAdapter<T>) {
   for cellType in right.cellAdapter.cellTypes {
-    left.register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)
+    cellType.register(collectionView: left)
   }
   
   left.delegate = right
@@ -59,7 +59,7 @@ public func <- <T> (left: MappedCollectionView<T>, right: ([T.T.T], T)) {
   left.adapter = StaticCollectionAdapter(values: values, cellAdapter: cellAdapter)
 
   for cellType in cellAdapter.cellTypes {
-    left.register(cellType.nib, forCellWithReuseIdentifier: cellType.identifier)
+    cellType.register(collectionView: left)
   }
   
   left.delegate = left.adapter

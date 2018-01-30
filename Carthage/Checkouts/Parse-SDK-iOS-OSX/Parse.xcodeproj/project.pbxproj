@@ -3843,6 +3843,7 @@
 				099C082113AC013900D71869 /* Tests */,
 				09D3364C139C54940098E916 /* Frameworks */,
 				09D3364B139C54940098E916 /* Products */,
+				7079278A1FF68AAC0078809C /* Recovered References */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -3898,6 +3899,16 @@
 				8101A14719ACDA97008BB503 /* PFAlertView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		7079278A1FF68AAC0078809C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0B3121B44A05100F3EBC4 /* PFPaymentTransactionObserver_Private.h */,
+				97DE045B163214C0007154E8 /* SystemConfiguration.framework */,
+				97DE045016321428007154E8 /* CoreLocation.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		7C83A03B15B4A609005E2C8E /* Commands */ = {

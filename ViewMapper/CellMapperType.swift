@@ -10,7 +10,8 @@ import Foundation
 
 public class CellMapperType: NSObject {
   public var identifier: String!
-  public var nib: UINib!
+  public var nib: UINib?
+  public var className: AnyClass?
   
   public required init(identifier: String, nib: UINib) {
     super.init()
@@ -19,7 +20,26 @@ public class CellMapperType: NSObject {
     self.nib = nib
   }
   
-  public convenience init(identifier: String, nibName: String) {
-    self.init(identifier: identifier, nib: UINib(nibName: nibName, bundle: nil))
+  public required init(identifier: String, className: AnyClass) {
+    super.init()
+    
+    self.identifier = identifier
+    self.className = className
+  }
+  
+  public func register(tableView: UITableView) {
+    if let nib = self.nib {
+      tableView.register(nib, forCellReuseIdentifier: self.identifier)
+    } else if let className = self.className {
+      tableView.register(className, forCellReuseIdentifier: self.identifier)
+    }
+  }
+  
+  public func register(collectionView: UICollectionView) {
+    if let nib = self.nib {
+      collectionView.register(nib, forCellWithReuseIdentifier: self.identifier)
+    } else if let className = self.className {
+      collectionView.register(className, forCellWithReuseIdentifier: self.identifier)
+    }
   }
 }

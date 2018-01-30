@@ -23,7 +23,9 @@ public func <- (left: UIImageView, right: URL?) {
   left.image = nil
   
   if let url = right {
-    left.hnk_setImageFromURL(url)
+    left.hnk_setImageFromURL(url, placeholder: nil, format: nil, failure: nil, success: { image in
+      left.hnk_setImage(image, animated: true, success: nil)
+    })
   }
 }
 
