@@ -24,7 +24,11 @@ public func <- (left: UIImageView, right: URL?) {
   
   if let url = right {
     left.hnk_setImageFromURL(url, placeholder: nil, format: nil, failure: nil, success: { image in
-      left.hnk_setImage(image, animated: true, success: nil)
+      left.hnk_fetcher = nil
+      
+      UIView.transition(with: left, duration: 0.3, options: .transitionCrossDissolve, animations: {
+        left.image = image
+      }, completion: nil)
     })
   }
 }
