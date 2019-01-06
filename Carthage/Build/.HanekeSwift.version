@@ -1,9 +1,21 @@
 {
-  "commitish" : "2f6d87f1f725d204d85cb34492e8c399cd5a200f",
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "Haneke",
+      "hash" : "5c71584af87fe14e5e19b43d5e11752d1ebabd49e014d182d55b12439854872c"
+    }
+  ],
+  "commitish" : "v0.11.1",
   "iOS" : [
     {
       "name" : "Haneke",
-      "hash" : "dfe11a41c4b3d56fad3b295c34e9f28dc4b16ac819ff47d8c2d2759b793e17a8"
+      "hash" : "96d234746de2bfe965e92e756a05882ae4829d94eab3acedbfb29c43b4950745"
     }
   ]
 }

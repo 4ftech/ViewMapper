@@ -7,4 +7,5 @@ framework module Haneke {
 
 module Haneke.Swift {
     header "Haneke-Swift.h"
+    requires objc
 }

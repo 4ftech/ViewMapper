@@ -1,0 +1,6 @@
+BCSymbolMap Version: 2.0
+-[TestProject_TVFrameworkCustomClass nothing]
+Apple LLVM version 10.0.0 (clang-1000.11.45.5)
+/Users/nickuya/Development/iOS/frameworks/ViewMapper/Carthage/Checkouts/facebook-ios-sdk/vendor/xctool/xctool/xctool-tests/TestData/TestProject-TVFramework/TestProject-TVFramework/TestProject-TVFrameworkCustomClass.m
+/Users/nickuya/Development/iOS/frameworks/ViewMapper/Carthage/Checkouts/facebook-ios-sdk/vendor/xctool/xctool/xctool-tests/TestData/TestProject-TVFramework
+/Users/nickuya/Library/Caches/org.carthage.CarthageKit/DerivedData/10.1_10B61/facebook-ios-sdk/sdk-version-4.39.0/Build/Intermediates.noindex/ArchiveIntermediates/TestProject-TVFramework/IntermediateBuildFilesPath/TestProject-TVFramework.build/Release-appletvos/TestProjectTVFramework.build/DerivedSources/TestProjectTVFramework_vers.c
