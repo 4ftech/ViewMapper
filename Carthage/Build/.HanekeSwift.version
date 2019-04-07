@@ -1,21 +1,10 @@
 {
-  "Mac" : [
-
-  ],
-  "watchOS" : [
-
-  ],
-  "tvOS" : [
-    {
-      "name" : "Haneke",
-      "hash" : "5c71584af87fe14e5e19b43d5e11752d1ebabd49e014d182d55b12439854872c"
-    }
-  ],
   "commitish" : "v0.11.1",
   "iOS" : [
     {
       "name" : "Haneke",
-      "hash" : "96d234746de2bfe965e92e756a05882ae4829d94eab3acedbfb29c43b4950745"
+      "hash" : "2dfe55886782a6fee3cf8eb9bbde2e7a1d4f94b293c4c3a643de6f5552ef9e5b",
+      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
     }
   ]
 }
