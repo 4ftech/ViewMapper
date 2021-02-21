@@ -14,11 +14,6 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>ParseEurekaViewMapper.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
 		<key>ViewMapper.xcscheme</key>
 		<dict>
 			<key>orderHint</key>

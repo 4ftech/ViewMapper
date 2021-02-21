@@ -2,9 +2,18 @@
   "commitish" : "v0.11.1",
   "iOS" : [
     {
+      "swiftToolchainVersion" : "5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)",
+      "hash" : "61182da306c9cd25205604a9e331f770899a1f971170c309328af225230e9976",
       "name" : "Haneke",
-      "hash" : "dacdc2b0edce19a72c12248153746520770c35d48e19d354d2880692b19cfd64",
-      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+      "container" : "Haneke.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)",
+      "hash" : "cdbc0235a68cc5723faee91f3c41f2be71df79243074b9aac29b9b291ccc0195",
+      "name" : "Haneke",
+      "container" : "Haneke.xcframework",
+      "identifier" : "ios-arm64_armv7"
     }
   ]
 }

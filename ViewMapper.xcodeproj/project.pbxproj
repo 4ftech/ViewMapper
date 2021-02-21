@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,24 +18,45 @@
 		705D2D631E5E131E005D3A5F /* HanekeViewMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 705D2D611E5E131D005D3A5F /* HanekeViewMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		705D2D671E5E1328005D3A5F /* ViewMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */; };
 		705D2D691E5E148B005D3A5F /* HanekeViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2D681E5E148B005D3A5F /* HanekeViewMapper.swift */; };
-		705D2D6C1E5E1496005D3A5F /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D6B1E5E1496005D3A5F /* Haneke.framework */; };
 		705D2D821E5E18BF005D3A5F /* EurekaViewMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 705D2D801E5E18BF005D3A5F /* EurekaViewMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		705D2D871E5E18CA005D3A5F /* EurekaViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2D861E5E18CA005D3A5F /* EurekaViewMapper.swift */; };
 		705D2D881E5E18D9005D3A5F /* ViewMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */; };
-		705D2D8B1E5E19E7005D3A5F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D8A1E5E19E7005D3A5F /* Eureka.framework */; };
 		705D2E4A1E6093FE005D3A5F /* CellMapperAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */; };
 		705D2E4C1E60942A005D3A5F /* StaticTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */; };
 		705D2E4E1E609442005D3A5F /* StaticCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */; };
 		705D2E981E609726005D3A5F /* NibCellMapperAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */; };
 		705D2E9A1E609740005D3A5F /* CellMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2E991E609740005D3A5F /* CellMapper.swift */; };
-		705D2F791E668705005D3A5F /* ParseEurekaViewMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 705D2F771E668705005D3A5F /* ParseEurekaViewMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		705D2F7E1E668714005D3A5F /* ParseEurekaViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2F7D1E668714005D3A5F /* ParseEurekaViewMapper.swift */; };
-		705D2F7F1E66872B005D3A5F /* ViewMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */; };
-		705D2F801E668731005D3A5F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2D8A1E5E19E7005D3A5F /* Eureka.framework */; };
-		705D2F8A1E668807005D3A5F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2F891E668807005D3A5F /* Parse.framework */; };
-		705D2F8C1E66880E005D3A5F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705D2F8B1E66880E005D3A5F /* Bolts.framework */; };
 		705D2FFE1E6762C1005D3A5F /* ViewMappableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */; };
+		70BA6C5425E301020085F526 /* Haneke.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BA6C4F25E300E70085F526 /* Haneke.xcframework */; };
+		70BA6C5525E301020085F526 /* Haneke.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70BA6C4F25E300E70085F526 /* Haneke.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		70BA6C5925E3010A0085F526 /* Eureka.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BA6C4A25E300D30085F526 /* Eureka.xcframework */; };
+		70BA6C5A25E3010A0085F526 /* Eureka.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70BA6C4A25E300D30085F526 /* Eureka.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		70BA6C5625E301020085F526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				70BA6C5525E301020085F526 /* Haneke.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BA6C5B25E3010A0085F526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				70BA6C5A25E3010A0085F526 /* Eureka.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		702A9ECE1EFCB7B100383405 /* MappedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappedCollectionView.swift; sourceTree = "<group>"; };
@@ -52,24 +73,18 @@
 		705D2D611E5E131D005D3A5F /* HanekeViewMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HanekeViewMapper.h; sourceTree = "<group>"; };
 		705D2D621E5E131E005D3A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		705D2D681E5E148B005D3A5F /* HanekeViewMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanekeViewMapper.swift; sourceTree = "<group>"; };
-		705D2D6B1E5E1496005D3A5F /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/iOS/Haneke.framework; sourceTree = "<group>"; };
 		705D2D7E1E5E18BF005D3A5F /* EurekaViewMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EurekaViewMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		705D2D801E5E18BF005D3A5F /* EurekaViewMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurekaViewMapper.h; sourceTree = "<group>"; };
 		705D2D811E5E18BF005D3A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		705D2D861E5E18CA005D3A5F /* EurekaViewMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaViewMapper.swift; sourceTree = "<group>"; };
-		705D2D8A1E5E19E7005D3A5F /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		705D2E491E6093FE005D3A5F /* CellMapperAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMapperAdapter.swift; sourceTree = "<group>"; };
 		705D2E4B1E60942A005D3A5F /* StaticTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableAdapter.swift; sourceTree = "<group>"; };
 		705D2E4D1E609442005D3A5F /* StaticCollectionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCollectionAdapter.swift; sourceTree = "<group>"; };
 		705D2E971E609726005D3A5F /* NibCellMapperAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCellMapperAdapter.swift; sourceTree = "<group>"; };
 		705D2E991E609740005D3A5F /* CellMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMapper.swift; sourceTree = "<group>"; };
-		705D2F751E668705005D3A5F /* ParseEurekaViewMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParseEurekaViewMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		705D2F771E668705005D3A5F /* ParseEurekaViewMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseEurekaViewMapper.h; sourceTree = "<group>"; };
-		705D2F781E668705005D3A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		705D2F7D1E668714005D3A5F /* ParseEurekaViewMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseEurekaViewMapper.swift; sourceTree = "<group>"; };
-		705D2F891E668807005D3A5F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
-		705D2F8B1E66880E005D3A5F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		705D2FFD1E6762C1005D3A5F /* ViewMappableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMappableController.swift; sourceTree = "<group>"; };
+		70BA6C4A25E300D30085F526 /* Eureka.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Eureka.xcframework; path = Carthage/Build/Eureka.xcframework; sourceTree = "<group>"; };
+		70BA6C4F25E300E70085F526 /* Haneke.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Haneke.xcframework; path = Carthage/Build/Haneke.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				705D2D671E5E1328005D3A5F /* ViewMapper.framework in Frameworks */,
-				705D2D6C1E5E1496005D3A5F /* Haneke.framework in Frameworks */,
+				70BA6C5425E301020085F526 /* Haneke.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,19 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BA6C5925E3010A0085F526 /* Eureka.xcframework in Frameworks */,
 				705D2D881E5E18D9005D3A5F /* ViewMapper.framework in Frameworks */,
-				705D2D8B1E5E19E7005D3A5F /* Eureka.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		705D2F711E668705005D3A5F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				705D2F7F1E66872B005D3A5F /* ViewMapper.framework in Frameworks */,
-				705D2F801E668731005D3A5F /* Eureka.framework in Frameworks */,
-				705D2F8A1E668807005D3A5F /* Parse.framework in Frameworks */,
-				705D2F8C1E66880E005D3A5F /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +122,6 @@
 				705D2D1D1E5D22B3005D3A5F /* ViewMapper */,
 				705D2D601E5E131D005D3A5F /* HanekeViewMapper */,
 				705D2D7F1E5E18BF005D3A5F /* EurekaViewMapper */,
-				705D2F761E668705005D3A5F /* ParseEurekaViewMapper */,
 				705D2D1C1E5D22B3005D3A5F /* Products */,
 				705D2D6A1E5E1496005D3A5F /* Frameworks */,
 				705D2D581E5E11FE005D3A5F /* Cartfile */,
@@ -131,7 +134,6 @@
 				705D2D1B1E5D22B3005D3A5F /* ViewMapper.framework */,
 				705D2D5F1E5E131D005D3A5F /* HanekeViewMapper.framework */,
 				705D2D7E1E5E18BF005D3A5F /* EurekaViewMapper.framework */,
-				705D2F751E668705005D3A5F /* ParseEurekaViewMapper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,10 +164,8 @@
 		705D2D6A1E5E1496005D3A5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				705D2F8B1E66880E005D3A5F /* Bolts.framework */,
-				705D2F891E668807005D3A5F /* Parse.framework */,
-				705D2D8A1E5E19E7005D3A5F /* Eureka.framework */,
-				705D2D6B1E5E1496005D3A5F /* Haneke.framework */,
+				70BA6C4A25E300D30085F526 /* Eureka.xcframework */,
+				70BA6C4F25E300E70085F526 /* Haneke.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,16 +178,6 @@
 				705D2D861E5E18CA005D3A5F /* EurekaViewMapper.swift */,
 			);
 			path = EurekaViewMapper;
-			sourceTree = "<group>";
-		};
-		705D2F761E668705005D3A5F /* ParseEurekaViewMapper */ = {
-			isa = PBXGroup;
-			children = (
-				705D2F771E668705005D3A5F /* ParseEurekaViewMapper.h */,
-				705D2F781E668705005D3A5F /* Info.plist */,
-				705D2F7D1E668714005D3A5F /* ParseEurekaViewMapper.swift */,
-			);
-			path = ParseEurekaViewMapper;
 			sourceTree = "<group>";
 		};
 		70C407C41E699F9500A14EB7 /* Lists */ = {
@@ -233,14 +223,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		705D2F721E668705005D3A5F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				705D2F791E668705005D3A5F /* ParseEurekaViewMapper.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +252,7 @@
 				705D2D5B1E5E131D005D3A5F /* Frameworks */,
 				705D2D5C1E5E131D005D3A5F /* Headers */,
 				705D2D5D1E5E131D005D3A5F /* Resources */,
+				70BA6C5625E301020085F526 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +271,7 @@
 				705D2D7A1E5E18BF005D3A5F /* Frameworks */,
 				705D2D7B1E5E18BF005D3A5F /* Headers */,
 				705D2D7C1E5E18BF005D3A5F /* Resources */,
+				70BA6C5B25E3010A0085F526 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,31 +282,13 @@
 			productReference = 705D2D7E1E5E18BF005D3A5F /* EurekaViewMapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		705D2F741E668705005D3A5F /* ParseEurekaViewMapper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 705D2F7A1E668705005D3A5F /* Build configuration list for PBXNativeTarget "ParseEurekaViewMapper" */;
-			buildPhases = (
-				705D2F701E668705005D3A5F /* Sources */,
-				705D2F711E668705005D3A5F /* Frameworks */,
-				705D2F721E668705005D3A5F /* Headers */,
-				705D2F731E668705005D3A5F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ParseEurekaViewMapper;
-			productName = ParseEurekaViewMapper;
-			productReference = 705D2F751E668705005D3A5F /* ParseEurekaViewMapper.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		705D2D121E5D22B3005D3A5F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = Oinkist;
 				TargetAttributes = {
 					705D2D1A1E5D22B3005D3A5F = {
@@ -343,12 +309,6 @@
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
-					705D2F741E668705005D3A5F = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 83K9V733W2;
-						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 705D2D151E5D22B3005D3A5F /* Build configuration list for PBXProject "ViewMapper" */;
@@ -367,7 +327,6 @@
 				705D2D1A1E5D22B3005D3A5F /* ViewMapper */,
 				705D2D5E1E5E131D005D3A5F /* HanekeViewMapper */,
 				705D2D7D1E5E18BF005D3A5F /* EurekaViewMapper */,
-				705D2F741E668705005D3A5F /* ParseEurekaViewMapper */,
 			);
 		};
 /* End PBXProject section */
@@ -389,13 +348,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		705D2D7C1E5E18BF005D3A5F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		705D2F731E668705005D3A5F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,14 +392,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		705D2F701E668705005D3A5F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				705D2F7E1E668714005D3A5F /* ParseEurekaViewMapper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -476,6 +420,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -539,6 +484,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -561,7 +507,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -582,7 +529,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -604,7 +555,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -625,11 +580,15 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build",
 				);
 				INFOPLIST_FILE = HanekeViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper.HanekeViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -651,11 +610,15 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build",
 				);
 				INFOPLIST_FILE = HanekeViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper.HanekeViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -676,11 +639,15 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build",
 				);
 				INFOPLIST_FILE = EurekaViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper.EurekaViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -702,63 +669,16 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build",
 				);
 				INFOPLIST_FILE = EurekaViewMapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper.EurekaViewMapper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		705D2F7B1E668705005D3A5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 83K9V733W2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = ParseEurekaViewMapper/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper.ParseEurekaViewMapper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		705D2F7C1E668705005D3A5F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 83K9V733W2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = ParseEurekaViewMapper/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nickuya.ViewMapper.ParseEurekaViewMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -801,15 +721,6 @@
 			buildConfigurations = (
 				705D2D841E5E18BF005D3A5F /* Debug */,
 				705D2D851E5E18BF005D3A5F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		705D2F7A1E668705005D3A5F /* Build configuration list for PBXNativeTarget "ParseEurekaViewMapper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				705D2F7B1E668705005D3A5F /* Debug */,
-				705D2F7C1E668705005D3A5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
