@@ -2,9 +2,10 @@
   "commitish" : "v0.11.1",
   "iOS" : [
     {
+      "hash" : "4e5ca2ddc34420c84c1abb8f2343d23432d970904102bb0a68406e5b3af6d289",
       "name" : "Haneke",
-      "hash" : "2dfe55886782a6fee3cf8eb9bbde2e7a1d4f94b293c4c3a643de6f5552ef9e5b",
-      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
     }
   ]
 }
